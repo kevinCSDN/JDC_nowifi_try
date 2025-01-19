@@ -13,13 +13,15 @@
 
 
 
-rm -rf package/feeds/small/v2ray-geodata
+rm -rf package/emortal/automount
+rm -rf package/emortal/autosamba
+rm -rf package/emortal/default-settings
 
-#替换新版本的upnp
-rm -rf feeds/luci/applications/luci-app-upnp
-git clone -b openwrt-23.05 https://github.com/openwrt/luci.git luci1
-cp -r luci1/applications/luci-app-upnp feeds/luci/applications/
-rm -rf luci1
+
+#保留应用
+#启用extglob 扩展功能
+shopt -s extglob
+rm -rf feeds/luci/applications/!(luci-app-upnp|luci-app-ddns|luci-app-docker|luci-app-openclash|luci-app-firewall|luci-app-ttyd|luci-app-autoreboot|luci-app-smartdns)
 ./scripts/feeds install -a -f
 
 
