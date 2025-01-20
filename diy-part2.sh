@@ -21,8 +21,8 @@ rm -rf package/emortal/default-settings
 #保留应用
 #启用extglob 扩展功能
 shopt -s extglob
-rm -rf feeds/luci/applications/!(luci-app-upnp|luci-app-ddns|luci-app-docker|luci-app-openclash|luci-app-firewall|luci-app-ttyd|luci-app-autoreboot|luci-app-smartdns)
-rm -rf package/feeds/luci/!(luci-app-upnp|luci-app-ddns|luci-app-docker|luci-app-openclash|luci-app-firewall|luci-app-ttyd|luci-app-autoreboot|luci-app-smartdns)
+rm -rf feeds/luci/applications/!(luci-app-upnp|luci-app-ddns|luci-app-docker|luci-app-openclash|luci-app-firewall|luci-app-ttyd|luci-app-autoreboot|luci-app-smartdns|luci-app-package-manager)
+rm -rf package/feeds/luci/!(luci-app-upnp|luci-app-ddns|luci-app-docker|luci-app-openclash|luci-app-firewall|luci-app-ttyd|luci-app-autoreboot|luci-app-smartdns|luci-app-package-manager)
 ./scripts/feeds install -a -f
 
 
