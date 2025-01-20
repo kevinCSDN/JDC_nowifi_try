@@ -16,7 +16,7 @@
 rm -rf package/emortal/automount
 rm -rf package/emortal/autosamba
 rm -rf package/emortal/default-settings
-rm -rf package/feeds/small/trojan-plus
+rm -rf feeds/small/trojan-plus
 
 
 #保留应用
